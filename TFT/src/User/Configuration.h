@@ -73,7 +73,7 @@
 /**
  * show banner text at the top of the TFT in Marlin Mode.
  */
-#define MARLIN_SHOW_BANNER  true //to enabled: true | to disabled: false
+#define MARLIN_SHOW_BANNER  false //to enabled: true | to disabled: false
 /**
  * Run Marlin Mode in Fullscreen
  *
@@ -172,9 +172,9 @@
 #define FAN_NUM      1    // set in 1~6
 #define FAN_CTRL_NUM 0    // set in 1~2
 
-#define PREHEAT_LABELS   {"PLA", "PETG", "ABS", "WOOD", "TPU", "NYLON"}
-#define PREHEAT_HOTEND   {200,   240,    230,   170,    220,   250}
-#define PREHEAT_BED      {60,    70,     90,    50,     50,    90}
+#define PREHEAT_LABELS   {"PLA", "PETG", "ASA", "ABS", "TPU", "NYLON"}
+#define PREHEAT_HOTEND   {200,   240,    260,   240,    220,   250}
+#define PREHEAT_BED      {60,    85,     105,    100,     50,    90}
 
 #define HEAT_MAX_TEMP    {275,       275,       275,       275,       275,       275,       150,    60}   //max temperature can be set
 #define HEAT_SIGN_ID     {"T0:",     "T1:",     "T2:",     "T3:",     "T4:",     "T5:",     "B:",   "C:"}
@@ -204,9 +204,9 @@
 #define AXIS_DISPLAY_ID  {"X",  "Y",  "Z",   "E",  "E2"}
 
 // Default move speed mm/min
-#define DEFAULT_SPEED_MOVE   3000
-#define SPEED_MOVE_SLOW      1000
-#define SPEED_MOVE_FAST      5000
+#define DEFAULT_SPEED_MOVE   6000
+#define SPEED_MOVE_SLOW      1500
+#define SPEED_MOVE_FAST      12000
 
 // Extrude speed mm/min
 #define EXTRUDE_SLOW_SPEED   60
@@ -217,8 +217,8 @@
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 235
-#define Y_MAX_POS 235
+#define X_MAX_POS 258
+#define Y_MAX_POS 261
 #define Z_MAX_POS 250
 
 // Specify a pause position as { X, Y, Z_raise }
@@ -324,7 +324,7 @@
 /**
  * PID autotune
  */
-#define PID_CMD             {"M303 U1 C8 E0", "M303 U1 C8 E1", "M303 U1 C8 E2", "M303 U1 C8 E3", "M303 U1 C8 E4", "M303 U1 C8 E5", "M303 U1 C8 E-1", ""};
+#define PID_CMD             {"M303 U1 C10 E0", "M303 U1 C8 E1", "M303 U1 C8 E2", "M303 U1 C8 E3", "M303 U1 C8 E4", "M303 U1 C8 E5", "M303 U1 C10 E-1", ""};
 #define PID_PROCESS_TIMEOUT 900000                         // expressed in ms. E.g. 900000 corresponds to 15 minutes
 
 // LCD Encoder
