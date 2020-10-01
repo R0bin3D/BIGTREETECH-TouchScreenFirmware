@@ -105,14 +105,14 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 115200
+#define BAUDRATE 500000
 
 /**
  * Default Touch Mode Language
  * Select the language to display on the LCD while in Touch Mode.
  * Options: ARMENIAN, CHINESE, CZECH, DUTCH, ENGLISH, FRENCH, GERMAN, HUNGARIAN, ITALIAN, JAPANESE, POLISH, PORTUGUESE, RUSSIAN, SLOVAK, SPAIN, CATALAN
  */
-#define DEFAULT_LANGUAGE ENGLISH
+#define DEFAULT_LANGUAGE GERMAN
 
 /**
  * Show bootscreen when starting up
@@ -150,7 +150,7 @@
  *  TOAST: A Toast notification is displayed for few seconds. No user interaction is needed
  *
  */
-#define ACK_NOTIFICATION_STYLE 1
+#define ACK_NOTIFICATION_STYLE 2
 
 /**
  * Default Touch Mode Color Options
