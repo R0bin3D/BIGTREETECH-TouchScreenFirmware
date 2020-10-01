@@ -257,7 +257,7 @@
  * Options:  0: Disabled    1: Auto-detect [default]    2: ABL    3: BBL    4: UBL    5: MBL
  *
  */
-#define ENABLE_BL_VALUE 1
+#define ENABLE_BL_VALUE 3
 
 /**
  * Enable friendly probe offset language.
