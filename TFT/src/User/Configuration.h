@@ -404,10 +404,10 @@
  *
  * CUSTOM_X_LABEL is the name of the custom button, CUSTOM_X_GCODE is the G-code to be sent by the custom button, this should always end with a New-Line character '\n'
  */
-#define CUSTOM_0_LABEL "Disable Steppers"
-#define CUSTOM_0_GCODE "M84\n"
-#define CUSTOM_1_LABEL "Init SD Card"
-#define CUSTOM_1_GCODE "M21\n"
+#define CUSTOM_0_LABEL "Auto Align Z"
+#define CUSTOM_0_GCODE "G34\n"
+#define CUSTOM_1_LABEL "Tramming"
+#define CUSTOM_1_GCODE "G35\n"
 #define CUSTOM_2_LABEL "Release SD Card"
 #define CUSTOM_2_GCODE "M22\n"
 #define CUSTOM_3_LABEL "Enable Leveling State"
@@ -449,6 +449,6 @@
 #define PRINT_END_GCODE "G90\nG1 E-4\nG92 E0\nM18\n" // Switch to absolute positioning, reduce filament pressure by performing small retract, reset extruder position, disable steppers
 
 // Cancel G-code - run this G-code after canceling print
-#define PRINT_CANCEL_GCODE "G28 XY R10\n" // Home XY and raise Z 10mm
+#define PRINT_CANCEL_GCODE "G91\nG1 Z15 F300\nG90\nM104 S0\nM140 S0\nM107\nG92 E1\nG1 E-1 F300\nG28 X0 Y0\nM84" // Home XY and raise Z 10mm
 
 #endif
