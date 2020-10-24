@@ -132,12 +132,12 @@ void menuRGBSettings(void)
   // title
   LABEL_RGB_SETTINGS,
   // icon                       label
-   {{ICON_RGB_RED,              LABEL_RED},
-    {ICON_RGB_GREEN,            LABEL_GREEN},
-    {ICON_RGB_BLUE,             LABEL_BLUE},
-    {ICON_RGB_WHITE,            LABEL_WHITE},
-    {ICON_RGB_OFF,              LABEL_OFF},
+   {{ICON_BACKGROUND,           LABEL_BACKGROUND},
     {ICON_BACKGROUND,           LABEL_BACKGROUND},
+    {ICON_BACKGROUND,           LABEL_BACKGROUND},
+    {ICON_BACKGROUND,           LABEL_BACKGROUND},
+    {ICON_RGB_OFF,              LABEL_OFF},
+    {ICON_RGB_WHITE,            LABEL_WHITE},
     {ICON_BACKGROUND,           LABEL_BACKGROUND},
     {ICON_BACK,                 LABEL_BACK},}
   };
@@ -168,7 +168,11 @@ void menuRGBSettings(void)
         break;
 
       case KEY_ICON_4:  //Turn Off
-        storeCmd("M150 R0 U0 B0 P0\n");
+        storeCmd("M355 S0\n");
+        break;
+      
+      case KEY_ICON_5:  //Turn On
+        storeCmd("M355 S1\n");
         break;
 
       case KEY_ICON_7:
